@@ -19,7 +19,7 @@ jobs:
       - name: Download Gists
         run: |
           pip install -r requirements.txt
-          python bootstrap.py ${{ secrets.GIST_TOKEN }}
+          python bootstrap.py ${{ secrets.GIST_TOKEN }} --include_private
 
       - uses: limjh16/jekyll-action-ts@v2
         with:
